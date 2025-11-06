@@ -1,0 +1,66 @@
+/* stylelint-disable at-rule-no-unknown */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Poppins:wght@600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-dem-blue: #0015BC;
+  --color-dem-dark: #000A7A;
+  --color-dem-light: #E8F1FF;
+  --color-rep-red: #E81B23;
+  --color-rep-dark: #B01419;
+  --color-rep-light: #FFE8E8;
+  --color-neutral-gray: #F5F5F5;
+  
+  --max-width-tight: 18rem;
+}
+
+:root {
+  --primary: #2563EB; /* blue-600 */
+  --accent: #F59E0B;  /* amber-500 */
+  --bg: #F9FAFB;
+  --text: #1F2937;
+  --subtext: #6B7280;
+  --success: #16A34A;
+  --error: #DC2626;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, rgba(37,99,235,0.03), rgba(99,102,241,0.02));
+  font-family: 'Poppins', 'Nunito Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* soft paper texture overlay (subtle) */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(0,0,0,0.01) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.app-card {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+}
+
+/* Utility: visually-hidden for screen reader only content */
+.sr-only { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; border: 0; padding: 0; margin: -1px; }
+
+.focus-ring:focus { outline: none; box-shadow: 0 0 0 4px rgba(37,99,235,0.12); border-radius: 6px; }
+
+.muted { color: var(--subtext); }
+
+.tooltip { cursor: help; }
+
+
